@@ -1,0 +1,50 @@
+<div class="container mt-4" style=" width: 100%;height: 1800px;  background-color: rgb(145, 189, 216);">
+  <h3 class="mb-3" style="margin-top: 130px;" >Employee Information</h3>
+   <!-- <img class="main-img" src="../../../assets/Logo.png" style="margin-top: 130px;" alt=""> -->
+  <div class="top-bar">
+    <button class="add-btn" (click)="addEmployee()">+ Add Data</button>
+  </div>
+
+  <table class="table table-bordered" style="border: 2px solid black; border-collapse: collapse;">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Role</th>
+        <th>Salary</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Location</th>
+        <th>Project</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees; let i = index">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.firstname }}</td>
+        <td>{{ emp.lastname }}</td>
+        <td>{{ emp.role }}</td>
+        <td>{{ emp.salary }}</td>
+        <td>{{ emp.phonenbr }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.location }}</td>
+        <td>{{ emp.project }}</td>
+        <td>
+           <button class="btn1 update" (click)="updateEmployee(emp.id)">Update</button>
+           
+           &nbsp;
+           <button class="btn btn-outline-danger" (click)="deleteEmployee(emp.id)">Delete</button>
+
+          <!-- <button class="btn delete" (click)="deleteEmployee(emp.id)">Delete</button> -->
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <button class="btn btn-primary mt-3" (click)="openForm()" style="margin-top: 100px;">Post Data</button> -->
+
+  
+</div>

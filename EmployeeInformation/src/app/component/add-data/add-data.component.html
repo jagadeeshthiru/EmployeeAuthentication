@@ -1,0 +1,46 @@
+<div class="form-container" style="padding: 205px; background-color: rgb(240, 226, 226);">
+  <h2>Add New Employee</h2>
+ 
+    <form  #empForm="ngForm" (ngSubmit)="onSubmit()">
+      
+        <div class="form-group">
+            <label for="id">ID:</label>
+          <input type="text" id="id"class="form-control"  [(ngModel)]="newEmployee.id" name="id" required />
+        </div>
+        <div class="form-group">
+            <label for="firstname">FirstName:</label>
+          <input type="text" id="firstname" class="form-control"  [(ngModel)]="newEmployee.firstname" name="firstname" required />
+        </div>
+        <div class="form-group">
+        <label for="lastname">LastName:</label>
+          <input type="text" id="lastname" class="form-control"  [(ngModel)]="newEmployee.lastname" name="lastname" required />
+        </div>
+        <div class="form-group">
+            <label for="role">Role:</label>
+          <input type="text" id="role" class="form-control"  [(ngModel)]="newEmployee.role" name="role" required />
+        </div>
+        <div class="form-group">
+            <label for="salary">salary:</label>
+          <input type="number" id="salary" class="form-control"  [(ngModel)]="newEmployee.salary" name="salary" required />
+        </div>
+        <div class="form-group">
+            <label for="phonenbr">Phone Number:</label>
+          <input type="number" id="phonenbr" class="form-control"  [(ngModel)]="newEmployee.phonenbr" name="phonenbr" required />
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+          <input type="email" id="email" class="form-control"  [(ngModel)]="newEmployee.email" name="email" required />
+        </div>
+        <div class="form-group">
+            <label for="location">Location:</label>
+          <input type="text" id="location" class="form-control"  [(ngModel)]="newEmployee.location" name="location" required />
+        </div>
+        <div class="form-group">
+        <label for="project">Project:</label>
+          <input type="text" id="project" class="form-control"  [(ngModel)]="newEmployee.project" name="project" required />
+        </div>
+      
+      <button type="submit" class="btn btn-success" >Apply</button>
+    </form>
+  
+</div>

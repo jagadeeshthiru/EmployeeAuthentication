@@ -1,0 +1,24 @@
+
+
+<body>
+  
+<nav class="navbar">
+  <div class="navbar-container">
+    <h1 class="navbar-title">EmployeeAPP</h1>
+    <ul class="navbar-links">
+      <!-- <li><a href="#">Home</a></li> -->
+      <!-- <li><a href="#">Features</a></li> -->
+       <!-- <li><a routerLink="/employee-list">Employee_List</a></li> -->
+                  <a *ngFor="let heading of headData"  [routerLink]="heading.path"  tabindex="0" class="nav-item" style="margin-right: 50px;" > {{ heading.label }}</a>  <!-- //For Directives -->
+
+    </ul>
+  </div>
+</nav>
+
+
+
+</body>
+
+
+<router-outlet></router-outlet>
+<router-outlet></router-outlet>
